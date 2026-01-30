@@ -92,6 +92,7 @@ prisma/           # Schema do banco de dados e migrations
 | `DATABASE_URL`        | String de conexão com seu banco (Postgres/MySQL/etc).  |
 | `AUTH_SECRET`         | String aleatória para segurança dos tokens (NextAuth). |
 | `NEXT_PUBLIC_APP_URL` | URL base da aplicação para redirecionamentos.          |
+| `SESSION_COOKIE_NAME` | Token de autenticação do usúario.                      |   
 
 ---
 
