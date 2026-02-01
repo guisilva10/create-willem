@@ -38,10 +38,10 @@ export function SignUpForm() {
     startTransition(async () => {
       try {
         await signUpAction(data);
-        toast.success("Conta criada com sucesso!");
+        toast.success("Account created successfully!");
         router.push("/auth/sign-in");
       } catch (error) {
-        toast.error("Erro ao criar conta, tente novamente!");
+        toast.error("Error creating account, please try again!");
         console.log(error);
       }
     });
@@ -49,9 +49,9 @@ export function SignUpForm() {
   return (
     <div>
       <div className="flex flex-col items-center gap-1 text-center">
-        <h1 className="text-2xl font-bold">Crie sua conta</h1>
+        <h1 className="text-2xl font-bold">Create your account</h1>
         <p className="text-muted-foreground text-sm text-balance">
-          Insira seu email e senha para seguir.
+          Enter your details to get started.
         </p>
       </div>
       <Form {...form}>
@@ -61,11 +61,11 @@ export function SignUpForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nome</FormLabel>
+                <FormLabel>Name</FormLabel>
                 <FormControl>
                   <Input
                     type="text"
-                    placeholder="digite seu nome"
+                    placeholder="enter your name"
                     disabled={isPending}
                     {...field}
                   />
@@ -83,7 +83,7 @@ export function SignUpForm() {
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="digite seu email"
+                    placeholder="enter your email"
                     disabled={isPending}
                     {...field}
                   />
@@ -98,11 +98,11 @@ export function SignUpForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Senha</FormLabel>
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
                     type="password"
-                    placeholder="digite sua senha"
+                    placeholder="enter your password"
                     disabled={isPending}
                     {...field}
                   />
@@ -114,11 +114,11 @@ export function SignUpForm() {
           <Button type="submit" className="w-full" disabled={isPending}>
             {isPending ? (
               <p className="flex items-center">
-                Criando <LoaderIcon className="ml-2 size-4 animate-spin" />
+                Creating <LoaderIcon className="ml-2 size-4 animate-spin" />
               </p>
             ) : (
               <p className="flex items-center">
-                Criar <LogInIcon className="ml-2 size-4" />
+                Create <LogInIcon className="ml-2 size-4" />
               </p>
             )}
           </Button>
@@ -126,9 +126,9 @@ export function SignUpForm() {
       </Form>
       <div className="mt-4 flex items-center justify-center gap-2">
         <p className="text-muted-foreground">
-          Já tem uma conta?{" "}
+          Already have an account?{" "}
           <Link href="/auth/sign-in" className="text-primary hover:underline">
-            Faça login
+            Sign in
           </Link>
         </p>
       </div>

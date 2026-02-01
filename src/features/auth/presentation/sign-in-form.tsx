@@ -44,9 +44,9 @@ export function SignInForm() {
           },
         );
 
-        toast.success("Seja bem vindo(a)");
+        toast.success("Welcome back!");
       } catch (error) {
-        toast.error("Erro ao fazer login, tente novamente!");
+        toast.error("Error signing in, please try again!");
         console.log(error);
       }
     });
@@ -54,9 +54,9 @@ export function SignInForm() {
   return (
     <div>
       <div className="flex flex-col items-center gap-1 text-center">
-        <h1 className="text-2xl font-bold">Acesse sua conta</h1>
+        <h1 className="text-2xl font-bold">Sign in to your account</h1>
         <p className="text-muted-foreground text-sm text-balance">
-          Insira seu email e senha para seguir.
+          Enter your email and password to continue.
         </p>
       </div>
       <Form {...form}>
@@ -70,7 +70,7 @@ export function SignInForm() {
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="digite seu email"
+                    placeholder="enter your email"
                     disabled={isPending}
                     {...field}
                   />
@@ -84,11 +84,11 @@ export function SignInForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Senha</FormLabel>
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
                     type="password"
-                    placeholder="digite sua senha"
+                    placeholder="enter your password"
                     disabled={isPending}
                     {...field}
                   />
@@ -100,11 +100,11 @@ export function SignInForm() {
           <Button type="submit" className="w-full" disabled={isPending}>
             {isPending ? (
               <p className="flex items-center">
-                Entrando <LoaderIcon className="ml-2 size-4 animate-spin" />
+                Signing in <LoaderIcon className="ml-2 size-4 animate-spin" />
               </p>
             ) : (
               <p className="flex items-center">
-                Entrar <LogInIcon className="ml-2 size-4" />
+                Sign in <LogInIcon className="ml-2 size-4" />
               </p>
             )}
           </Button>
@@ -112,9 +112,9 @@ export function SignInForm() {
       </Form>
       <div className="mt-4 flex items-center justify-center gap-2">
         <p className="text-muted-foreground">
-          Não tem uma conta?{" "}
+          Don't have an account?{" "}
           <Link href="/auth/sign-up" className="text-primary hover:underline">
-            Registre-se
+            Sign up
           </Link>
         </p>
       </div>

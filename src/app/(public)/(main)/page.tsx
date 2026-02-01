@@ -71,7 +71,7 @@ export default function Home() {
           >
             <Link href="/auth/sign-in">
               <RocketIcon className="mr-2 size-5 fill-current" />
-              Entrar
+              Get Started
             </Link>
           </Button>
         </div>

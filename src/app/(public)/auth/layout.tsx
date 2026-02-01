@@ -29,7 +29,7 @@ export default function Page({ children }: PropsWithChildren) {
           </div>
           <Link href="/" className={buttonVariants({ variant: "outline" })}>
             <ArrowLeftIcon className="size-4" />
-            Voltar
+            Back
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center">
